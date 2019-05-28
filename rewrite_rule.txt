@@ -1,0 +1,123 @@
+fastcgi
+RewriteRule ^(.*)$ index.php?/$1 [L]
+http://localhost/index.php/application/dwadaw
+  ["PATH_INFO"]=>
+  string(19) "/application/dwadaw"
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["REQUEST_URI"]=>
+  string(29) "/index.php/application/dwadaw"
+  ["QUERY_STRING"]=>
+  string(0) ""
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:/Projects/NULAFX/index.php"
+  ["PHP_SELF"]=>
+  string(29) "/index.php/application/dwadaw"
+
+fastcgi
+RewriteRule ^(.*)$ index.php?/$1 [L]
+http://localhost/application/dwadaw?dawdwadw=dawdwa
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["REQUEST_URI"]=>
+  string(35) "/application/dwadaw?dawdwadw=dawdwa"
+  ["QUERY_STRING"]=>
+  string(19) "/application/dwadaw"
+  ["REDIRECT_QUERY_STRING"]=>
+  string(19) "/application/dwadaw"
+  ["REDIRECT_URL"]=>
+  string(19) "/application/dwadaw"
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:/Projects/NULAFX/index.php"
+  ["PHP_SELF"]=>
+  string(10) "/index.php"
+
+built-in server
+http://localhost/index.php/application/dwadaw?dawdwadw=dawdwa
+  ["REQUEST_URI"]=>
+  string(45) "/index.php/application/dwadaw?dawdwadw=dawdwa"
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:\Projects\NULAFX\index.php"
+  ["PATH_INFO"]=>
+  string(19) "/application/dwadaw"
+  ["PHP_SELF"]=>
+  string(29) "/index.php/application/dwadaw"
+  ["QUERY_STRING"]=>
+  string(15) "dawdwadw=dawdwa"
+
+
+built-in server
+http://localhost/index.php?application/dwadaw?dawdwadw=dawdwa
+  ["REQUEST_URI"]=>
+  string(45) "/index.php?application/dwadaw?dawdwadw=dawdwa"
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:\Projects\NULAFX\index.php"
+  ["PHP_SELF"]=>
+  string(10) "/index.php"
+  ["QUERY_STRING"]=>
+  string(34) "application/dwadaw?dawdwadw=dawdwa"
+
+built-in server index.php
+http://localhost/index.php/application/dwadaw?dawdwadw=dawdwa
+  ["REQUEST_URI"]=>
+  string(45) "/index.php/application/dwadaw?dawdwadw=dawdwa"
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:\Projects\NULAFX\index.php"
+  ["PATH_INFO"]=>
+  string(19) "/application/dwadaw"
+  ["PHP_SELF"]=>
+  string(29) "/index.php/application/dwadaw"
+  ["QUERY_STRING"]=>
+  string(15) "dawdwadw=dawdwa"
+
+built-in server index.php
+http://localhost/index.php?application/dwadaw?dawdwadw=dawdwa
+  ["REQUEST_URI"]=>
+  string(45) "/index.php?application/dwadaw?dawdwadw=dawdwa"
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:\Projects\NULAFX\index.php"
+  ["PHP_SELF"]=>
+  string(10) "/index.php"
+  ["QUERY_STRING"]=>
+  string(34) "application/dwadaw?dawdwadw=dawdwa"
+
+built-in server index.php
+http://localhost/application/dwadaw?dawdwadw=dawdwa
+  ["REQUEST_URI"]=>
+  string(35) "/application/dwadaw?dawdwadw=dawdwa"
+  ["SCRIPT_NAME"]=>
+  string(19) "/application/dwadaw"
+  ["SCRIPT_FILENAME"]=>
+  string(9) "index.php"
+  ["PHP_SELF"]=>
+  string(19) "/application/dwadaw"
+  ["QUERY_STRING"]=>
+  string(15) "dawdwadw=dawdwa"
+
+built-in server index.php
+http://localhost/?application/dwadaw?dawdwadw=dawdwa
+  ["REQUEST_URI"]=>
+  string(36) "/?application/dwadaw?dawdwadw=dawdwa"
+  ["SCRIPT_NAME"]=>
+  string(10) "/index.php"
+  ["SCRIPT_FILENAME"]=>
+  string(28) "O:\Projects\NULAFX\index.php"
+  ["PHP_SELF"]=>
+  string(10) "/index.php"
+  ["QUERY_STRING"]=>
+  string(34) "application/dwadaw?dawdwadw=dawdwa"
+
+
+总结：
+如果PHP_SELF最后包含/，直接取QUERY_STRING
+如有PATH_INFO、REDIRECT_URL，直接使用
+如果QUERY_STRING带了问号，则取第一段使用
+如果DOCUMENT_ROOT + SCRIPT_NAME不是有效的文件名则使用SCRIPT_NAME

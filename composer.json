@@ -1,0 +1,20 @@
+{
+    "name": "nulastudio/detect-uri",
+    "description": "detect real path info URI from URL",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LiesAuer",
+            "email": "liesauer@liesauer.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "files": [
+            "src/detectURI.php"
+        ]
+    }
+}
