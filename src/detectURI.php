@@ -9,7 +9,6 @@ function detectURI()
      * 如果DOCUMENT_ROOT + SCRIPT_NAME不是有效的文件名则使用SCRIPT_NAME
      */
     $uri = '';
-    var_dump($_SERVER);
     if (isset($_SERVER['PHP_SELF']) && substr($_SERVER['PHP_SELF'], -1) === '/') {
         $uri = $_SERVER['QUERY_STRING'];
     } else if (isset($_SERVER['PATH_INFO'])) {
